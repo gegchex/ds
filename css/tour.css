@@ -1,0 +1,72 @@
+body{
+    background-image: red !important;
+}
+.tours-cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+.tours-cards .card{
+    margin: 30px;
+    border-radius: 50px;
+    background-color: #d4faff !important;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.card-img-top{
+    border-radius: 50px !important;
+}
+
+
+
+@keyframes appear{
+    from{opacity: 0;
+        scale: 0.5;
+
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+.nav-link{
+
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+    height: 50px !important;
+   }
+   .nav-link:hover {
+     opacity: 1;
+   }
+   
+   .nav-link::before {
+     transition: 300ms;
+     height: 5px;
+     content: "";
+     position: absolute;
+     background-color: #a5c9ff;
+   }
+   
+   .nav-link-ltr::before {
+     width: 0%;
+     bottom: 10px;
+   }
+   
+   .nav-link-ltr:hover::before {
+     width: 100%;
+   }
